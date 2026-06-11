@@ -1,0 +1,23 @@
+{
+  "appName": { "message": "MeetScribe" },
+  "appDesc": { "message": "نسخ مفتوح المصدر للاجتماعات المباشرة مع ملخصات ذكية وعناصر إجراء" },
+  "startRecording": { "message": "بدء التسجيل" },
+  "stopRecording": { "message": "إيقاف التسجيل" },
+  "clearTranscript": { "message": "مسح" },
+  "summarize": { "message": "تلخيص" },
+  "actionItems": { "message": "عناصر الإجراء" },
+  "askAI": { "message": "اسأل الذكاء الاصطناعي" },
+  "generateSummary": { "message": "إنشاء ملخص" },
+  "extractActions": { "message": "استخراج عناصر الإجراء" },
+  "settingsTitle": { "message": "الإعدادات" },
+  "aiProvider": { "message": "موفر الذكاء الاصطناعي" },
+  "apiKey": { "message": "مفتاح API" },
+  "model": { "message": "النموذج" },
+  "language": { "message": "اللغة" },
+  "save": { "message": "حفظ" },
+  "close": { "message": "إغلاق" },
+  "placeholder": { "message": "افتح Google Meet وقم بتشغيل التسميات التوضيحية (CC) لبدء النسخ." },
+  "noTranscript": { "message": "لم يتم تسجيل أي تسميات توضيحية بعد." },
+  "cannotAccessMeet": { "message": "لا يمكن الوصول إلى علامة تبويب Meet. قم بتحديث الصفحة." },
+  "openMeetFirst": { "message": "افتح Google Meet أولاً" }
+}

@@ -1,0 +1,14 @@
+# MeetScribe
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+
+# API keys (DO NOT COMMIT)
+.env
+*.env.local
+
+# Firebase (if used later)
+.firebase/
+firebase-debug.log

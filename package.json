@@ -1,0 +1,11 @@
+{
+  "name": "meetscribe",
+  "version": "1.0.0",
+  "description": "Open-source live meeting transcriber with AI summaries",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "echo 'Dev mode: load unpacked in chrome://extensions/'"
+  },
+  "license": "MIT"
+}

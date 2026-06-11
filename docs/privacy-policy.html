@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — MeetScribe</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #1a1a2e; color: #eaeaea; line-height: 1.7; }
+        h1 { color: #e94560; border-bottom: 2px solid #e94560; padding-bottom: 10px; }
+        h2 { color: #e94560; margin-top: 30px; }
+        code { background: #16213e; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .last-updated { color: #a0a0b0; font-size: 0.9em; margin-top: -10px; }
+        .tag { display: inline-block; background: #2ecc71; color: #fff; padding: 2px 10px; border-radius: 4px; font-size: 0.8em; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #2a2a4a; color: #a0a0b0; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>MeetScribe Privacy Policy <span class="tag">Open Source</span></h1>
+    <p class="last-updated">Last updated: June 11, 2026</p>
+
+    <h2>Overview</h2>
+    <p>MeetScribe is an open-source Chrome extension for meeting transcription and AI-powered summaries. This policy explains how we handle user data.</p>
+
+    <h2>Data Collection</h2>
+
+    <h3>What We Collect</h3>
+    <ul>
+        <li><strong>Meeting captions:</strong> Real-time text from Google Meet's built-in captioning feature</li>
+        <li><strong>Speaker names:</strong> Extracted from the caption stream</li>
+        <li><strong>Settings:</strong> Your preferred AI provider, model choice, and API key</li>
+    </ul>
+
+    <h3>What We Do NOT Collect</h3>
+    <ul>
+        <li>✗ <strong>Audio recordings</strong> — Tactiq does not record or store audio. We only capture text captions.</li>
+        <li>✗ <strong>Video</strong> — No video data is captured</li>
+        <li>✗ <strong>Personal information</strong> — No names, emails, or contact details beyond what appears in captions</li>
+        <li>✗ <strong>Browsing history</strong> — Only Google Meet pages are accessed</li>
+        <li>✗ <strong>Keystrokes or mouse movements</strong></li>
+    </ul>
+
+    <h2>Data Storage</h2>
+    <p><strong>All data remains on your device.</strong> Captions and settings are stored using <code>chrome.storage.local</code>, which is encrypted by Chrome and never transmitted to our servers. We operate no backend servers.</p>
+    <p>Data stored locally:</p>
+    <ul>
+        <li>Transcription history (last 50 meetings)</li>
+        <li>Extension settings (AI provider, model, language preference)</li>
+        <li>Your API key (if configured)</li>
+    </ul>
+
+    <h2>AI Processing</h2>
+    <p>When you click <strong>"Summarize"</strong>, <strong>"Action Items"</strong>, or <strong>"Ask AI"</strong>, the transcript text is sent to your <strong>chosen AI provider</strong> (OpenAI, Anthropic Claude, DeepSeek, or Google Gemini) using your own API key.</p>
+    <ul>
+        <li><strong>No data is sent automatically.</strong> AI processing is always user-triggered.</li>
+        <li><strong>We do not see your data.</strong> The request goes directly from your browser to the AI provider.</li>
+        <li><strong>Your API key is your own.</strong> We do not provide or manage AI keys.</li>
+        <li>OpenAI does not use API-submitted data to train models (see <a href="https://openai.com/policies/api-data-usage-policies" style="color:#e94560;">OpenAI API Policy</a>).</li>
+        <li>Similar policies apply to Anthropic, DeepSeek, and Google.</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p><strong>We do not share any user data with third parties.</strong> The only data transmission is the transcript you explicitly choose to send to your configured AI provider.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>MeetScribe integrates with the following third-party services at your direction:</p>
+    <ul>
+        <li>OpenAI API (via your key)</li>
+        <li>Anthropic Claude API (via your key)</li>
+        <li>DeepSeek API (via your key)</li>
+        <li>Google Gemini API (via your key)</li>
+        <li>Google Meet (for caption access only)</li>
+    </ul>
+    <p>Each provider has its own privacy policy governing data sent to their API.</p>
+
+    <h2>Permissions</h2>
+    <table>
+        <tr><th>Permission</th><th>Why We Need It</th></tr>
+        <tr><td><code>sidePanel</code></td><td>Display the live transcript sidebar during meetings</td></tr>
+        <tr><td><code>storage</code></td><td>Store transcript history and settings locally</td></tr>
+        <tr><td><code>activeTab</code></td><td>Open side panel on the current Meet tab</td></tr>
+        <tr><td><code>tabs</code></td><td>Find Google Meet tabs to inject caption extraction</td></tr>
+        <tr><td><code>host_permissions</code></td><td>Access Meet pages and AI provider APIs</td></tr>
+    </table>
+
+    <h2>Security</h2>
+    <ul>
+        <li>No external servers operate behind the extension</li>
+        <li>API keys stored in Chrome's encrypted local storage</li>
+        <li>All network requests go directly to providers you select</li>
+        <li>Source code is fully open and auditable on GitHub</li>
+    </ul>
+
+    <h2>Children's Privacy</h2>
+    <p>MeetScribe is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Changes will be posted to this URL and reflected in the "Last updated" date above.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy inquiries, contact: <strong>meetscribe@bsmlx.dev</strong></p>
+    <p>Or open an issue on <a href="https://github.com/BSMLX/meetscribe" style="color:#e94560;">GitHub</a>.</p>
+
+    <footer>
+        <p>MeetScribe is open-source software licensed under MIT. Not affiliated with Google, Zoom, or Microsoft Teams.</p>
+        <p><a href="https://github.com/BSMLX/meetscribe" style="color:#e94560;">View source on GitHub</a></p>
+    </footer>
+</body>
+</html>

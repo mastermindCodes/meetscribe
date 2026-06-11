@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeetScribe</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="ms-header">
+      <div class="ms-header-left">
+        <h1 class="ms-title">MeetScribe</h1>
+        <span class="ms-badge ms-badge-oss">OSS</span>
+      </div>
+      <div class="ms-header-right">
+        <button class="ms-btn ms-btn-icon" id="settingsBtn" title="Settings">⚙️</button>
+        <button class="ms-btn ms-btn-icon" id="historyBtn" title="History">📋</button>
+      </div>
+    </header>
+
+    <!-- Recording Controls -->
+    <div class="ms-controls">
+      <button class="ms-btn ms-btn-record" id="recordBtn">
+        <span class="ms-record-dot"></span>
+        <span id="recordLabel">Start Recording</span>
+      </button>
+      <button class="ms-btn ms-btn-secondary" id="clearBtn" disabled>🗑️ Clear</button>
+      <span class="ms-segment-count" id="segmentCount">0 segments</span>
+    </div>
+
+    <!-- Transcription Area -->
+    <div class="ms-transcript-container" id="transcriptContainer">
+      <div class="ms-transcript" id="transcriptArea">
+        <div class="ms-placeholder" id="placeholder">
+          <div class="ms-placeholder-icon">🎤</div>
+          <p>Open Google Meet and enable captions (CC)<br/> to start transcribing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Actions -->
+    <div class="ms-ai-section" id="aiSection">
+      <div class="ms-ai-tabs">
+        <button class="ms-ai-tab active" data-tab="summarize">📝 Summarize</button>
+        <button class="ms-ai-tab" data-tab="actions">✅ Action Items</button>
+        <button class="ms-ai-tab" data-tab="custom">💬 Ask AI</button>
+      </div>
+      <div class="ms-ai-content">
+        <div class="ms-ai-tab-content active" id="summarizeContent">
+          <button class="ms-btn ms-btn-accent" id="summarizeBtn">Generate Summary</button>
+          <div class="ms-ai-result" id="summaryResult"></div>
+        </div>
+        <div class="ms-ai-tab-content" id="actionsContent">
+          <button class="ms-btn ms-btn-accent" id="actionsBtn">Extract Action Items</button>
+          <div class="ms-ai-result" id="actionsResult"></div>
+        </div>
+        <div class="ms-ai-tab-content" id="customContent">
+          <div class="ms-custom-input-row">
+            <input type="text" class="ms-input" id="customPromptInput" placeholder="Ask anything about the meeting..." />
+            <button class="ms-btn ms-btn-accent" id="customAskBtn">Ask</button>
+          </div>
+          <div class="ms-ai-result" id="customResult"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Export -->
+    <div class="ms-export-bar">
+      <button class="ms-btn ms-btn-small" id="exportTxtBtn">📄 TXT</button>
+      <button class="ms-btn ms-btn-small" id="exportSrtBtn">📄 SRT</button>
+      <button class="ms-btn ms-btn-small" id="exportJsonBtn">📄 JSON</button>
+      <button class="ms-btn ms-btn-small" id="copyBtn">📋 Copy</button>
+    </div>
+
+    <!-- Settings Panel (hidden) -->
+    <div class="ms-settings-overlay" id="settingsOverlay" style="display:none;">
+      <div class="ms-settings-panel">
+        <h2>Settings</h2>
+        <div class="ms-settings-group">
+          <label>AI Provider</label>
+          <select class="ms-select" id="aiProvider">
+            <option value="openai">OpenAI</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="claude">Claude (Anthropic)</option>
+            <option value="gemini">Gemini (Google)</option>
+          </select>
+        </div>
+        <div class="ms-settings-group">
+          <label>API Key</label>
+          <input type="password" class="ms-input" id="apiKey" placeholder="sk-..." />
+        </div>
+        <div class="ms-settings-group">
+          <label>Model</label>
+          <input type="text" class="ms-input" id="model" placeholder="gpt-4o-mini" />
+        </div>
+        <div class="ms-settings-group">
+          <label>Language (for AI responses)</label>
+          <select class="ms-select" id="aiLanguage">
+            <option value="auto">Auto (match transcript)</option>
+            <option value="English">English</option>
+            <option value="Arabic">العربية</option>
+            <option value="French">Français</option>
+            <option value="Spanish">Español</option>
+          </select>
+        </div>
+        <div class="ms-settings-actions">
+          <button class="ms-btn ms-btn-accent" id="saveSettingsBtn">Save</button>
+          <button class="ms-btn ms-btn-secondary" id="closeSettingsBtn">Close</button>
+        </div>
+        <p class="ms-settings-note">API keys are stored locally on your device. No data is sent to our servers.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/caption-store.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "appName": { "message": "MeetScribe" },
+  "appDesc": { "message": "Open-source live meeting transcription with AI summaries and action items" },
+  "startRecording": { "message": "Start Recording" },
+  "stopRecording": { "message": "Stop Recording" },
+  "clearTranscript": { "message": "Clear" },
+  "summarize": { "message": "Summarize" },
+  "actionItems": { "message": "Action Items" },
+  "askAI": { "message": "Ask AI" },
+  "generateSummary": { "message": "Generate Summary" },
+  "extractActions": { "message": "Extract Action Items" },
+  "settingsTitle": { "message": "Settings" },
+  "aiProvider": { "message": "AI Provider" },
+  "apiKey": { "message": "API Key" },
+  "model": { "message": "Model" },
+  "language": { "message": "Language" },
+  "save": { "message": "Save" },
+  "close": { "message": "Close" },
+  "placeholder": { "message": "Open Google Meet and enable captions (CC) to start transcribing." },
+  "noTranscript": { "message": "No captions recorded yet." },
+  "cannotAccessMeet": { "message": "Cannot access Meet tab. Refresh the page." },
+  "openMeetFirst": { "message": "Open Google Meet first" }
+}
