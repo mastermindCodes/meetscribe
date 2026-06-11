@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetScribe — نسخ الاجتماعات المفتوح المصدر</title>
+    <style>
+        body { font-family: 'Segoe UI', 'Noto Naskh Arabic', 'Traditional Arabic', serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #1a1a2e; color: #eaeaea; line-height: 1.8; }
+        h1 { color: #e94560; font-size: 2.2em; margin-bottom: 5px; }
+        .subtitle { color: #a0a0b0; font-size: 1.1em; margin-top: 0; }
+        .badge { display: inline-block; background: #2ecc71; color: #fff; padding: 3px 12px; border-radius: 4px; font-size: 0.85em; font-weight: 600; margin-left: 8px; }
+        .btn { display: inline-block; background: #e94560; color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 5px; }
+        .btn:hover { background: #ff6b81; }
+        .btn-outline { background: transparent; border: 2px solid #e94560; color: #e94560; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0; }
+        .feature { background: #16213e; padding: 15px; border-radius: 8px; border-right: 3px solid #e94560; }
+        .feature h3 { margin: 0 0 5px 0; color: #e94560; font-size: 1em; }
+        .feature p { margin: 0; color: #a0a0b0; font-size: 0.9em; }
+        hr { border: none; border-top: 1px solid #2a2a4a; margin: 30px 0; }
+        a { color: #e94560; }
+        .lang-switch { text-align: left; margin-bottom: 20px; }
+        .lang-switch a { color: #a0a0b0; text-decoration: none; padding: 4px 10px; border: 1px solid #2a2a4a; border-radius: 4px; }
+        .lang-switch a:hover { border-color: #e94560; }
+        code { background: #0f3460; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="index.html">🇬🇧 English</a>
+    </div>
+
+    <h1>🎙️ MeetScribe</h1>
+    <p class="subtitle"><span class="badge">مفتوح المصدر</span> نسخ مباشر للاجتماعات مع ملخصات ذكية وعناصر إجراء</p>
+
+    <div class="links" style="text-align:center;">
+        <a class="btn" href="https://github.com/mastermindCodes/meetscribe">على GitHub</a>
+        <a class="btn btn-outline" href="privacy-policy.html">سياسة الخصوصية</a>
+    </div>
+
+    <h2>ما هو MeetScribe؟</h2>
+    <p>MeetScribe هو إضافة كروم <strong>مجانية ومفتوحة المصدر</strong> لنسخ اجتماعات Google Meet مباشرة. لا ينضم بوت إلى اجتماعك — يعمل بالكامل من خلال التسميات التوضيحية المدمجة في المتصفح.</p>
+
+    <div class="features">
+        <div class="feature">
+            <h3>📝 نسخ مباشر</h3>
+            <p>التقاط التسميات التوضيحية في الوقت الفعلي في لوحة جانبية. تحديد المتحدث مع ترميز بالألوان.</p>
+        </div>
+        <div class="feature">
+            <h3>🤖 ملخصات ذكية</h3>
+            <p>تلخيص بنقرة واحدة باستخدام OpenAI أو Claude أو DeepSeek أو Gemini. مفتاح API الخاص بك.</p>
+        </div>
+        <div class="feature">
+            <h3>✅ عناصر الإجراء</h3>
+            <p>استخراج المهام والمسؤولين والمواعيد النهائية تلقائياً من المحادثات.</p>
+        </div>
+        <div class="feature">
+            <h3>🌍 دعم متعدد اللغات</h3>
+            <p>يدعم أكثر من 60 لغة عبر تسميات Google Meet. الذكاء الاصطناعي يرد بنفس اللغة — بما في ذلك العربية.</p>
+        </div>
+        <div class="feature">
+            <h3>🔒 الخصوصية أولاً</h3>
+            <p>لا تسجيل صوتي. لا بوتات تنضم للمكالمات. جميع البيانات مخزنة محلياً. مفتوح المصدر وقابل للتدقيق.</p>
+        </div>
+        <div class="feature">
+            <h3>📤 تصدير</h3>
+            <p>تصدير النصوص بتنسيق TXT أو SRT (ترجمة) أو JSON. مشاركة عبر رابط أو نسخ للحافظة.</p>
+        </div>
+    </div>
+
+    <h2>التثبيت</h2>
+    <ol>
+        <li>انسخ أو حمل من <a href="https://github.com/mastermindCodes/meetscribe">GitHub</a></li>
+        <li>اذهب إلى <code>chrome://extensions/</code></li>
+        <li>فعّل <strong>وضع المطور</strong></li>
+        <li>اضغط <strong>تحميل غير محزم</strong> واختر مجلد <code>meetscribe/</code></li>
+        <li>انضم إلى مكالمة Google Meet وفعّل التسميات التوضيحية (زر CC)</li>
+        <li>اضغط على أيقونة MeetScribe لفتح اللوحة الجانبية</li>
+    </ol>
+
+    <hr />
+    <p style="text-align:center;color:#a0a0b0;font-size:0.9em;">
+        MeetScribe غير مرتبط بـ Google أو Zoom أو Microsoft Teams.<br/>
+        <a href="https://github.com/mastermindCodes/meetscribe">GitHub</a> &middot;
+        <a href="privacy-policy.html">سياسة الخصوصية</a> &middot;
+        رخصة MIT
+    </p>
+</body>
+</html>
